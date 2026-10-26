@@ -1,0 +1,48 @@
+# Default Huntly Configuration
+
+# Job Search Defaults
+search:
+  default_location: "United States, Europe"
+  default_remote: true
+  default_time_frame: "24h"
+  jobs_per_request: 10
+  focus_regions:
+    - "United States"
+    - "Europe"
+  focus_type: "startup"
+  priority_fields:
+    - "freelance"
+    - "contract"
+    - "remote"
+
+# Scraping & API Quota Limits
+limits:
+  daily_job_limit: 50
+  monthly_requests_limit: 25
+  monthly_jobs_limit: 250
+  jobs_per_request: 10
+
+# AI Analysis
+ai:
+  provider: "nvidia" # "nvidia" | "ollama" | "openrouter"
+  model: "nvidia/nemotron-3.5-super-vl-120b-a12b"
+  base_url: "https://integrate.api.nvidia.com/v1"
+  temperature: 0.2
+  max_tokens: 2048
+  batch_analysis: true
+
+# Display
+display:
+  theme: "dark"
+  jobs_per_page: 20
+  match_threshold_green: 80
+  match_threshold_yellow: 50
+
+# Export
+export:
+  default_format: "csv"
+  export_dir: "./exports"
+
+# Resume
+resume:
+  path: "~/Downloads/resume.pdf"
